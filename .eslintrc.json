@@ -1,0 +1,7 @@
+{
+    "extends": ["next/core-web-vitals", "google"],
+    "rules": {
+        "object-curly-spacing": "off",
+        "max-len": "off"
+    }
+}
