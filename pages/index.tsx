@@ -13,6 +13,7 @@ import Button from '@components/Button';
 import { useEffect, useState } from 'react';
 import DecoderText from '@components/DecoderText';
 import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
+import Loader from '@components/Loader';
 
 const Home: NextPage = (): JSX.Element => {
     const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -47,17 +48,19 @@ const Home: NextPage = (): JSX.Element => {
                 <main
                     className={`w-full h-full flex justify-center flex-col items-center font-mono transition-all relative dark:bg-gray-900`}
                 >
-                    <Button className="mt-5 mr-3 dark:border-white dark:text-white dark:bg-[#3aff93] dark:shadow-offset-white dark:hover:shadow-offset-active-white">
+                    <Button className="my-2 dark:border-white dark:text-white dark:bg-[#3aff93] dark:shadow-offset-white dark:hover:shadow-offset-active-white">
                         <DecoderText text="Click Me" />
                     </Button>
 
-                    <Button className="mt-5 mr-3" secondary>
+                    <Button className="my-2" secondary>
                         Secondary
                     </Button>
 
-                    <Button onClick={handleDarkMode} className="mt-5 ml-3">
+                    <Button onClick={handleDarkMode} className="my-2">
                         {darkMode ? <SunIcon /> : <MoonIcon />}
                     </Button>
+
+                    <Loader placeholder="Loading..." />
 
                     <div className="text">
                         <p>
