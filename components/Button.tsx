@@ -1,5 +1,5 @@
-import { NextPage } from "next"
-import { MouseEventHandler } from "react";
+import { NextPage } from 'next';
+import { MouseEventHandler } from 'react';
 
 interface Props {
     children?: React.ReactNode;
@@ -10,7 +10,8 @@ interface Props {
 const Button: NextPage<Props> = ({ children, onClick, className }) => {
     return (
         <button
-            className={`
+            className={
+                `
                 inline-block p-4
                 md:p-3 font-bold
                 text-black dark:text-black
@@ -19,12 +20,13 @@ const Button: NextPage<Props> = ({ children, onClick, className }) => {
                 shadow-offset-black
                 hover:shadow-offset-active-black
                 hover:scale-105
-            ` + className}
+            ` + className
+            }
             onClick={onClick}
         >
             {children}
         </button>
-    )
-}
+    );
+};
 
 export default Button;

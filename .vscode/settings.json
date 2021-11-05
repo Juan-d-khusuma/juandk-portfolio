@@ -21,5 +21,14 @@
         "titleBar.inactiveBackground": "#21573299",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "#215732"
+    "peacock.color": "#215732",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.format": true
+    },
+    "ponicode.testSettings.testLocation.locationType": "Custom",
+    "ponicode.testSettings.testLocation.path": "{rootDir}/test/{filePath}/{fileName}.test.{ext}"
 }
