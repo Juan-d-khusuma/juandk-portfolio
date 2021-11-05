@@ -34,5 +34,9 @@ npm run build ||
     false;
 )
 
+# Deleting build related files
+rm -r .next
+rm ./tsconfig.tsbuildinfo
+
 # If everything passes... Now we can commit
 echo '✅ Everything seems good, now commiting the code...'
