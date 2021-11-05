@@ -36,24 +36,123 @@ const Home: NextPage = (): JSX.Element => {
     return (
         <>
             <Head>
-                <title>Create Next App</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <main
+            <div
                 className={`${
                     // Dark mode class
                     darkMode ? 'dark' : ''
-                } w-full h-full flex justify-center items-center font-mono transition-all`}
+                }`}
             >
-                <Button className="mt-5 mr-3">
-                    <DecoderText text="Click Me" />
-                </Button>
+                <main
+                    className={`w-full h-full flex justify-center flex-col items-center font-mono transition-all relative dark:bg-gray-900`}
+                >
+                    <Button className="mt-5 mr-3 dark:border-white dark:text-white dark:bg-[#3aff93] dark:shadow-offset-white dark:hover:shadow-offset-active-white">
+                        <DecoderText text="Click Me" />
+                    </Button>
 
-                <Button onClick={handleDarkMode} className="mt-5 ml-3">
-                    {darkMode ? <SunIcon /> : <MoonIcon />}
-                </Button>
-            </main>
+                    <Button className="mt-5 mr-3" secondary>
+                        Secondary
+                    </Button>
+
+                    <Button onClick={handleDarkMode} className="mt-5 ml-3">
+                        {darkMode ? <SunIcon /> : <MoonIcon />}
+                    </Button>
+
+                    <div className="text">
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                        <p>
+                            {' '}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellat doloribus voluptates dicta, maiores
+                            neque architecto eveniet culpa fugiat repudiandae
+                            officiis, nam quaerat quasi qui eum ipsa! Ea, nemo
+                            optio minima blanditiis sapiente ipsam? At harum
+                            quo, ratione numquam autem asperiores.{' '}
+                        </p>
+                    </div>
+                </main>
+            </div>
         </>
     );
 };

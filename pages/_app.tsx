@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css';
-import '@styles/globals.css';
+import '@styles/globals.scss';
+import Head from 'next/head';
 import { AppProps } from 'next/app';
 
 /**
@@ -7,7 +8,14 @@ import { AppProps } from 'next/app';
  * @return {React.ReactElement}
  */
 function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <Head>
+                <title>Juan D Khusuma | Software Developer</title>
+            </Head>
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 export default MyApp;
