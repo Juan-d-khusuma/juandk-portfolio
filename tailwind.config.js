@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
             background: {
-                'primary': '#f00'
+                primary: '#f00',
             },
             boxShadow: {
                 'offset-black': '2px 2px black',
