@@ -60,6 +60,10 @@ const Home: NextPage = (): JSX.Element => {
                         {darkMode ? <SunIcon /> : <MoonIcon />}
                     </Button>
 
+                    <Button>
+                        <Loader className="px-3" placeholder="Loading..." />
+                    </Button>
+
                     <Loader placeholder="Loading..." />
 
                     <div className="text">
