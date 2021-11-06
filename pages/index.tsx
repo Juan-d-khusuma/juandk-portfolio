@@ -61,7 +61,11 @@ const Home: NextPage = (): JSX.Element => {
                     </Button>
 
                     <Button>
-                        <Loader className="px-3" placeholder="Loading..." />
+                        <Loader
+                            className="px-3"
+                            placeholder="Loading..."
+                            childClassName="bg-red-400 border-[1px] border-black dark:border-white mx-[1px] w-[5px]"
+                        />
                     </Button>
 
                     <Loader placeholder="Loading..." />
