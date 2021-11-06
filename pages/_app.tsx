@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css';
 import '@styles/globals.scss';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 
 /**
  * @param {AppProps} props
@@ -9,12 +10,12 @@ import { AppProps } from 'next/app';
  */
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <>
+        <ThemeProvider attribute="class">
             <Head>
                 <title>Juan D Khusuma | Software Developer</title>
             </Head>
             <Component {...pageProps} />
-        </>
+        </ThemeProvider>
     );
 }
 
