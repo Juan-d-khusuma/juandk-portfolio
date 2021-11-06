@@ -11,10 +11,12 @@ import { ThemeProvider } from 'next-themes';
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ThemeProvider attribute="class">
-            <Head>
-                <title>Juan D Khusuma | Software Developer</title>
-            </Head>
-            <Component {...pageProps} />
+            <div className="font-mono">
+                <Head>
+                    <title>Juan D Khusuma | Software Developer</title>
+                </Head>
+                <Component {...pageProps} />
+            </div>
         </ThemeProvider>
     );
 }

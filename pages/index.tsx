@@ -21,7 +21,6 @@ const Home: NextPage = (): JSX.Element => {
     const { theme, setTheme } = useTheme();
     const [isMounted, setIsMounted] = useState<boolean>(false);
 
-    // Get dark mode preference from localStorage
     useEffect(() => {
         setIsMounted(true);
     }, []);
@@ -37,9 +36,7 @@ const Home: NextPage = (): JSX.Element => {
             <Head>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main
-                className={`w-full h-full flex justify-center flex-col items-center font-mono transition-all relative dark:bg-gray-900`}
-            >
+            <main className="relative flex flex-col items-center justify-center w-full h-full transition-all dark:bg-gray-900">
                 <Button className="my-2 dark:border-white dark:text-white dark:bg-[#3aff93] dark:shadow-offset-white dark:hover:shadow-offset-active-white">
                     <DecoderText text="Click Me" />
                 </Button>
@@ -61,99 +58,6 @@ const Home: NextPage = (): JSX.Element => {
                 </Button>
 
                 <Loader placeholder="Loading..." />
-
-                <div className="text">
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                    <p>
-                        {' '}
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Repellat doloribus voluptates dicta, maiores neque
-                        architecto eveniet culpa fugiat repudiandae officiis,
-                        nam quaerat quasi qui eum ipsa! Ea, nemo optio minima
-                        blanditiis sapiente ipsam? At harum quo, ratione numquam
-                        autem asperiores.{' '}
-                    </p>
-                </div>
             </main>
         </>
     );
