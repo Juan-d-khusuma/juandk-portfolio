@@ -1,5 +1,4 @@
-import { NextPage } from 'next';
-import { MouseEventHandler } from 'react';
+import React, { MouseEventHandler } from 'react';
 
 interface Props {
     children?: React.ReactNode;
@@ -8,7 +7,7 @@ interface Props {
     secondary?: boolean;
 }
 
-const Button: NextPage<Props> = ({
+const Button: React.FC<Props> = ({
     children,
     onClick,
     className,

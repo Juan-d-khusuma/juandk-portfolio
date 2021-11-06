@@ -1,5 +1,5 @@
 import usePrefersReducedMotion from '@hooks/usePrefersReducedMotion';
-import { NextPage } from 'next';
+import React from 'react';
 
 interface Props {
     placeholder: string;
@@ -18,7 +18,7 @@ interface Props {
  * <Loader placeholder="Loading..." bars={4} />
  *
  */
-const Loader: NextPage<Props> = ({
+const Loader: React.FC<Props> = ({
     placeholder,
     className,
     childClassName,
