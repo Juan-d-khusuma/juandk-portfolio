@@ -1,10 +1,17 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, useState } from 'react';
+import Loader from '@components/Loader';
 
+interface LoaderConf {
+    placeholder: string;
+    className?: string;
+    secondary?: boolean;
+}
 interface Props {
     children?: React.ReactNode;
     onClick?: MouseEventHandler<HTMLButtonElement>;
     className?: string;
     secondary?: boolean;
+    loader?: LoaderConf;
 }
 
 const Button: React.FC<Props> = ({
@@ -12,20 +19,22 @@ const Button: React.FC<Props> = ({
     onClick,
     className,
     secondary,
+    loader,
 }) => {
+    const [loading, setLoading] = useState<boolean>(false);
     if (secondary) {
         return (
             <button
                 className={`
-                    shadow-offset-mid-grey
-                    dark:shadow-offset-emerald hover:shadow-none
-                    border-[1px] text-xs relative
-                    text-smoky-black hover:text-platinum dark:text-platinum dark:hover:text-platinum
-                    border-gray-400 dark:border-platinum
-                    dark:hover:shadow-none 
+                    relative
                     px-2 py-1
+                    text-xs
+                    border-[1px] border-primary-dark dark:border-primary-light
+                    shadow-offset-accent-light dark:shadow-offset-accent-dark
+                    hover:shadow-offset-active-primary-light dark:hover:shadow-offset-primary-dark
 
-                    before:absolute before:bg-smoky-black dark:before:bg-eton-blue before:w-0 before:h-full
+
+                    before:absolute before:bg-secondary-light dark:before:bg-secondary-dark before:w-0 before:h-full
                     before:top-0 before:left-0 before:transition-all before:transition-duration-500
                     before:z-[-1] hover:before:w-full
                     ${className}
@@ -36,18 +45,57 @@ const Button: React.FC<Props> = ({
         );
     }
 
+    if (loader) {
+        return (
+            <button
+                onClick={() => setLoading(!loading)}
+                className={`min-w-[5rem] min-h-[3rem] ${
+                    loader.secondary
+                        ? `
+                        relative
+                        px-2 py-1
+                        text-xs
+                        border-[1px] border-primary-dark dark:border-primary-light
+                        shadow-offset-accent-light dark:shadow-offset-accent-dark
+                        hover:shadow-offset-active-primary-light dark:hover:shadow-offset-primary-dark
+
+                        before:absolute before:bg-secondary-light dark:before:bg-secondary-dark before:w-0 before:h-full
+                        before:top-0 before:left-0 before:transition-all before:transition-duration-500
+                        before:z-[-1] hover:before:w-full
+                        `
+                        : `
+                        p-2
+                        border-[1px] border-primary-dark dark:border-primary-light
+                        bg-secondary-light dark:bg-secondary-dark
+                        shadow-offset-accent-light dark:shadow-offset-accent-dark
+                        hover:shadow-offset-active-accent-light dark:hover:shadow-offset-active-accent-dark
+                        hover:-translate-x-2 hover:-translate-y-2
+                        `
+                } ${className}`}
+            >
+                {!loading ? (
+                    <div>{loader.placeholder}</div>
+                ) : (
+                    <Loader
+                        placeholder={loader.placeholder}
+                        className={loader.className}
+                    />
+                )}
+            </button>
+        );
+    }
+
     return (
         <button
-            className={
-                `
-                inline-block p-4 md:p-3 font-bold
-                text-platinum dark:text-smoky-black
-                dark:border-platinum border-[1px]  border-gray-400
-                dark:shadow-offset-emerald dark:hover:shadow-offset-active-emerald hover:shadow-offset-active-mid-grey shadow-offset-mid-grey
-                dark:bg-eton-blue bg-smoky-black
-                hover:-translate-x-1 hover:-translate-y-1 px-2 py-1
-            ` + className
-            }
+            className={`
+                p-2
+                border-[1px] border-primary-dark dark:border-primary-light
+                bg-secondary-light dark:bg-secondary-dark
+                shadow-offset-accent-light dark:shadow-offset-accent-dark
+                hover:shadow-offset-active-accent-light dark:hover:shadow-offset-active-accent-dark
+                hover:-translate-x-2 hover:-translate-y-2
+                ${className}
+                `}
             onClick={onClick}
         >
             {children}

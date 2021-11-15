@@ -11,7 +11,7 @@ export default class _Document extends Document {
         return (
             <Html>
                 <Head />
-                <body className="text-black bg-platinum dark:bg-smoky-black dark:text-white">
+                <body className="text-black bg-primary-light dark:bg-primary-dark dark:text-white">
                     <Main />
                     <NextScript />
                 </body>

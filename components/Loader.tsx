@@ -33,7 +33,7 @@ const Loader: React.FC<Props> = ({
                 {Array.from({ length: 3 }).map((_, i: number) => (
                     <span
                         key={i}
-                        className={`bg-green-500 loader-child h-[60%] origin-top-left scale-y-0 ${
+                        className={`bg-accent-dark dark:bg-accent-light loader-child h-[60%] origin-top-left scale-y-0 ${
                             childClassName ? childClassName : ''
                         }`}
                     ></span>

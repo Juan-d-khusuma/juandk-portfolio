@@ -56,6 +56,28 @@ const Showroom: NextPage = () => {
                 </header>
 
                 <main className="grid gap-0 mx-auto mt-10 justify-items-center lg:grid-cols-4 md:grid-cols-2">
+                    <Tiles label="Color" className="relative">
+                        <div className="flex flex-col items-center h-auto text-xs text-center">
+                            <div className="w-full h-auto text-black bg-primary-light">
+                                Primary Light
+                            </div>
+                            <div className="w-full h-auto text-white bg-primary-dark">
+                                Primary Dark
+                            </div>
+                            <div className="w-full h-auto text-white bg-secondary-light">
+                                Secondary Light
+                            </div>
+                            <div className="w-full text-white bg-secondary-dark">
+                                Secondary Dark
+                            </div>
+                            <div className="w-full text-white bg-accent-light">
+                                Accent Light
+                            </div>
+                            <div className="w-full text-white bg-accent-dark">
+                                Accent Dark
+                            </div>
+                        </div>
+                    </Tiles>
                     <Tiles label="Loader Component">
                         <Loader placeholder="test" />
                     </Tiles>
@@ -64,6 +86,13 @@ const Showroom: NextPage = () => {
                     </Tiles>
                     <Tiles label="Button Secondary">
                         <Button secondary>Button</Button>
+                    </Tiles>
+                    <Tiles label="Button Loader">
+                        <Button loader={{ placeholder: 'Loader' }} />
+                        <Button
+                            loader={{ placeholder: 'Loader', secondary: true }}
+                            className="mt-3"
+                        />
                     </Tiles>
                     {/* Decoder Text Showcase */}
                     <Tiles label="Decoder Text">

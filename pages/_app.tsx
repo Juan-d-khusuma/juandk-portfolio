@@ -3,7 +3,6 @@ import '@styles/globals.scss';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
-import Footer from '@components/Footer';
 
 /**
  * @param {AppProps} props
@@ -22,7 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                     />
                 </Head>
                 <Component {...pageProps} />
-                <Footer />
             </div>
         </ThemeProvider>
     );
