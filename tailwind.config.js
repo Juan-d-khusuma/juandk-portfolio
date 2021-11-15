@@ -9,10 +9,10 @@ module.exports = {
         extend: {
             colors: {
                 'primary-dark': '#12130f',
-                'emerald': '#5B9279',
+                emerald: '#5B9279',
                 'eton-blue': '#8FCB9B',
                 'primary-light': '#EAE6E5',
-                'mid-grey': '8F8073'
+                'mid-grey': '8F8073',
             },
             boxShadow: {
                 'offset-primary-dark': '2px 2px #12130f',
