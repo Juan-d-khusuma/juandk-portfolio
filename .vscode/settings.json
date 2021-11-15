@@ -28,7 +28,5 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
         "source.fixAll.format": true
-    },
-    "ponicode.testSettings.testLocation.locationType": "Custom",
-    "ponicode.testSettings.testLocation.path": "{rootDir}/test/{filePath}/{fileName}.test.{ext}"
+    }
 }

@@ -7,10 +7,25 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {
-            background: {
-                primary: '#f00',
+            colors: {
+                'primary-dark': '#12130f',
+                'emerald': '#5B9279',
+                'eton-blue': '#8FCB9B',
+                'primary-light': '#EAE6E5',
+                'mid-grey': '8F8073'
             },
             boxShadow: {
+                'offset-primary-dark': '2px 2px #12130f',
+                '-offset-primary-dark': '-2px -2px #12130f',
+                'offset-emerald': '2px 2px #5B9279',
+                '-offset-emerald': '-2px -2px #5B9279',
+                'offset-eton-blue': '2px 2px #8FCB9B',
+                '-offset-eton-blue': '-2px -2px #8FCB9B',
+                'offset-primary-light': '2px 2px #EAE6E5',
+                '-offset-primary-light': '-2px -2px #EAE6E5',
+                'offset-mid-grey': '2px 2px #8F8073',
+                '-offset-mid-grey': '-2px -2px #8F8073',
+
                 'offset-black': '2px 2px black',
                 '-offset-black': '-2px -2px black',
                 'offset-red': '2px 2px red',
@@ -60,6 +75,17 @@ module.exports = {
                 '-offset-active-purple': '-5px -5px purple',
                 'offset-active-white': '5px 5px white',
                 '-offset-active-white': '-5px -5px white',
+
+                'offset-active-primary-dark': '5px 5px #12130f',
+                '-offset-active-primary-dark': '-5px -5px #12130f',
+                'offset-active-emerald': '5px 5px #5B9279',
+                '-offset-active-emerald': '-5px -5px #5B9279',
+                'offset-active-eton-blue': '5px 5px #8FCB9B',
+                '-offset-active-eton-blue': '-5px -5px #8FCB9B',
+                'offset-active-primary-light': '5px 5px #EAE6E5',
+                '-offset-active-primary-light': '-5px -5px #EAE6E5',
+                'offset-active-mid-grey': '5px 5px #8F8073',
+                '-offset-active-mid-grey': '-5px -5px #8F8073',
             },
         },
     },

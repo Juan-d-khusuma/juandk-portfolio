@@ -9,7 +9,6 @@
  */
 
 import { NextPage } from 'next';
-import Head from 'next/head';
 import Button from '@components/Button';
 import { useEffect, useState } from 'react';
 import DecoderText from '@components/DecoderText';
@@ -33,9 +32,6 @@ const Home: NextPage = (): JSX.Element => {
 
     return (
         <>
-            <Head>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
             <main className="relative flex flex-col items-center justify-center w-full h-full transition-all dark:bg-gray-900">
                 <Button className="my-2 dark:border-white dark:text-white dark:bg-[#3aff93] dark:shadow-offset-white dark:hover:shadow-offset-active-white">
                     <DecoderText text="Click Me" />

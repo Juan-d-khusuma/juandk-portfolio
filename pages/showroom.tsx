@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
 import Button from '@components/Button';
-import { SunIcon, MoonIcon } from '@radix-ui/react-icons';
+import { SunIcon, MoonIcon, ReloadIcon, PlayIcon } from '@radix-ui/react-icons';
 import { useEffect, useState } from 'react';
 import Loader from '@components/Loader';
 import DecoderText from '@components/DecoderText';
@@ -10,6 +10,7 @@ import DecoderText from '@components/DecoderText';
 const Showroom: NextPage = () => {
     const { theme, setTheme } = useTheme();
     const [isMounted, setIsMounted] = useState<boolean>(false);
+    const [startDecoderText, setStartDecoderText] = useState<boolean>(true);
 
     useEffect(() => {
         setIsMounted(true);
@@ -51,7 +52,7 @@ const Showroom: NextPage = () => {
                 </Button>
 
                 <header className="mt-3 text-xl font-bold text-center underline">
-                    Showroom
+                    My Components
                 </header>
 
                 <main className="grid gap-0 mx-auto mt-10 justify-items-center lg:grid-cols-4 md:grid-cols-2">
@@ -64,8 +65,28 @@ const Showroom: NextPage = () => {
                     <Tiles label="Button Secondary">
                         <Button secondary>Button</Button>
                     </Tiles>
+                    {/* Decoder Text Showcase */}
                     <Tiles label="Decoder Text">
-                        <DecoderText text="Decoder Text" />
+                        <DecoderText
+                            className="font-bold"
+                            text="Decoder Text"
+                            start={startDecoderText}
+                        />
+                        <div className="absolute bottom-0 right-0 m-3">
+                            {startDecoderText ? (
+                                <Button
+                                    onClick={() => setStartDecoderText(false)}
+                                >
+                                    <ReloadIcon className="dark:text-white" />
+                                </Button>
+                            ) : (
+                                <Button
+                                    onClick={() => setStartDecoderText(true)}
+                                >
+                                    <PlayIcon className="dark:text-white" />
+                                </Button>
+                            )}
+                        </div>
                     </Tiles>
                 </main>
             </main>
